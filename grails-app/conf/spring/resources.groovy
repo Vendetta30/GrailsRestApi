@@ -1,4 +1,5 @@
 import com.CountryCustomRenderer
+import com.CountryJSONRenderer
 import com.Person
 import grails.rest.render.json.JsonCollectionRenderer
 import grails.rest.render.xml.XmlCollectionRenderer
@@ -17,5 +18,5 @@ beans = {
 //    customCountryRenderer = CountryCustomRenderer       //JSON
 
 
-
+    countryJsonRenderer = CountryJSONRenderer
 }
