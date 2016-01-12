@@ -14,5 +14,8 @@ beans = {
 //        excludes = ["age"]
 //    }
 
-    customCountryRenderer = CountryCustomRenderer       //JSON
+//    customCountryRenderer = CountryCustomRenderer       //JSON
+
+
+
 }

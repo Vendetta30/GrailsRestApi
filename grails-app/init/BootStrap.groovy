@@ -1,4 +1,5 @@
 import com.Person
+import grails.converters.JSON
 import restapi.Country
 
 class BootStrap {
@@ -13,6 +14,15 @@ class BootStrap {
             new Country(countryName: "USA", abreviation: "US", continent: "West").save(flush: true)
             new Country(countryName: "Japan", abreviation: "JP", continent: "Asia").save(flush: true)
             new Country(countryName: "Itly", abreviation: "IT", continent: "East").save(flush: true)
+        }
+
+        JSON.registerObjectMarshaller(Country) {
+            return [
+                    id  : it.id,
+                    name: it.countryName,
+                    abbv: it.abreviation,
+                    cont: it.continent
+            ]
         }
     }
     def destroy = {
