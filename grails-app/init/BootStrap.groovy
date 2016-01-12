@@ -15,15 +15,15 @@ class BootStrap {
             new Country(countryName: "Japan", abreviation: "JP", continent: "Asia").save(flush: true)
             new Country(countryName: "Itly", abreviation: "IT", continent: "East").save(flush: true)
         }
-
-        JSON.registerObjectMarshaller(Country) {
-            return [
-                    id  : it.id,
-                    name: it.countryName,
-                    abbv: it.abreviation,
-                    cont: it.continent
-            ]
-        }
+//
+//        JSON.registerObjectMarshaller(Country) {
+//            return [
+//                    id  : it.id,
+//                    name: it.countryName,
+//                    abbv: it.abreviation,
+//                    cont: it.continent
+//            ]
+//        }
     }
     def destroy = {
     }
