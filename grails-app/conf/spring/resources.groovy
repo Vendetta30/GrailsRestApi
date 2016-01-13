@@ -1,9 +1,4 @@
 import com.CountryCustomRenderer
-import com.CountryJSONRenderer
-import com.Person
-import grails.rest.render.json.JsonCollectionRenderer
-import grails.rest.render.xml.XmlCollectionRenderer
-import restapi.Country
 
 // Place your Spring DSL code here
 beans = {
@@ -15,8 +10,7 @@ beans = {
 //        excludes = ["age"]
 //    }
 
-//    customCountryRenderer = CountryCustomRenderer       //JSON
+//    customCountryRenderer = CountryCustomRenderer      // XML
 
-
-    countryJsonRenderer = CountryJSONRenderer
+//    countryJsonRenderer(CountryJSONRenderer)
 }
